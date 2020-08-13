@@ -1,6 +1,6 @@
-FROM rocker/r-ver:3.5.1
+FROM rocker/r-ver:3.6.3
 
-ENV RVERS 3.5.1
+ENV RVERS 3.6.3
 ENV COMMIT a0d3756efa35408ece600efe70f6cd7aa2f18d08
 
 ## Download and install dependencies
