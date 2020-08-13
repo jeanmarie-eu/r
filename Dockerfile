@@ -1,7 +1,7 @@
 FROM rocker/r-ver:3.4.4
 
-RVERS 3.4.4
-COMMIT a0d3756efa35408ece600efe70f6cd7aa2f18d08
+ENV RVERS 3.4.4
+ENV COMMIT a0d3756efa35408ece600efe70f6cd7aa2f18d08
 
 ## Download and install dependencies
 RUN apt-get update \
@@ -15,7 +15,7 @@ RUN apt-get update \
   && tar xzf r-vers.${RVERS}.tar.gz \
   && cd r-vers-${RVERS}-${COMMIT} \
   && Rscript ./lib/buildpkgs.R \
-  && cd ..
+  && cd .. \
   && rm -r r-vers-${RVERS}-${COMMIT} \
   && rm r-vers.${RVERS}.tar.gz
 
