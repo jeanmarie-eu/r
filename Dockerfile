@@ -1,6 +1,6 @@
-FROM rocker/r-ver:3.5.1
+FROM rocker/r-ver:3.6.3
 
-ENV RVERS 3.5.1
+ENV RVERS 3.6.3
 
 ## Download and install dependencies
 RUN apt-get update \
