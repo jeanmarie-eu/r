@@ -11,11 +11,11 @@ RUN apt-get update \
   # install r-packages
   && cd ~ \
   && wget --quiet https://git.nilu.no/jmll/r-vers/-/archive/${RVERS}/r-vers-${RVERS}.tar.gz \
-  && tar xzf r-vers.${RVERS}.tar.gz \
+  && tar xzf r-vers-${RVERS}.tar.gz \
   && cd r-vers-${RVERS} \
   && Rscript ./lib/buildpkgs.R \
   && cd .. \
   && rm -r r-vers-${RVERS} \
-  && rm r-vers.${RVERS}.tar.gz
+  && rm r-vers-${RVERS}.tar.gz
 
 CMD ["R"]
